@@ -1,4 +1,8 @@
 #%%writefile streamlit.py
+
+!pip install seaborn
+!pip install matplotlib
+
 import numpy as np
 import pandas as pd
 import streamlit as st
