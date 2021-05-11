@@ -6,7 +6,6 @@ import numpy as np
 import pandas as pd
 import os
 import pickle   ## For model loading 
-import spacy  ## For NLP tasks 
 import time
 import nltk
 import string
