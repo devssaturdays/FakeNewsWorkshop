@@ -5,7 +5,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import os
-import matplotlib.ticker as mtick
 import pickle   ## For model loading 
 import spacy  ## For NLP tasks 
 import time
