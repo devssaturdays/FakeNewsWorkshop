@@ -33,6 +33,16 @@ def Load_model():
     model = pickle.load(f)
   return model
 
+def Load_Tfidf():
+  with open('tfidf', 'rb') as f:
+    tfidf = pickle.load(f)
+  return tfidf  
+
+def Load_PCA():
+  with open('pca', 'rb') as f:
+    pca = pickle.load(f)
+  return pca  
+
 def get_wordnet_pos(tag):
   """
   Function to convert tags into wordnet's format
@@ -59,7 +69,7 @@ def list_to_string(list_):
       final_string += str(element) + " "
   return final_string
 
-def clean_data(headline, body):
+def clean_data(body, headline):
   df = pd.DataFrame({'Body':body, 'Headline':headline}, index=[0])
 
   #Text pre processing
@@ -106,17 +116,21 @@ def clean_data(headline, body):
 
   df =  df[['lemmatized_body_string','lemmatized_headline_string']]
 
+
   #TF-IDF
-  tfidf = TfidfVectorizer()
+  tfidf = Load_Tfidf()
 
   tf_idf_headlines = tfidf.fit_transform(df['lemmatized_headline_string']).toarray() 
   tf_idf_bodies = tfidf.fit_transform(df['lemmatized_body_string']).toarray()
 
   features = np.concatenate((tf_idf_bodies,tf_idf_headlines),axis=1)
 
-  predict = features
+  #PCA
+  pca = Load_PCA()
+  # #Apply pca to features
+  features_reduced = pca.fit_transform(features) 
 
-  return predict
+  return features_reduced
 
 def runPrediction():
 
@@ -124,21 +138,24 @@ def runPrediction():
 
   st.write('Introduce only a headline and the body to detect if it is fake or not.')
 
-  headline = st.text_area("Enter a headline here",height=200)
+  headline = st.text_area("Enter a headline here", height=200)
 
-  body = st.text_area("Enter the body here",height=200)
+  body = st.text_area("Enter the body here", height = 500)
+
+  
 
   if st.button("Predict"):
-    new_data = clean_data(headline, body)
+
+    new_data = clean_data(body, headline)
+
+    st.write(new_data)
 
     model = Load_model()
 
-    stance = model.predict(new_data)
-
-    st.write(model)
+    #stance = model.predict(new_data)
 
     st.subheader('New Stance')
-    st.subheader('The new is' + str(np.stance[0]))
+    #st.subheader('The new is' + str(np.stance[0]))
     st.balloons()
 
 def introduction():
