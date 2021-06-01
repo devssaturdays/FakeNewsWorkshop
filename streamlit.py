@@ -213,69 +213,6 @@ def choose_modelInfo():
 
   st.write("For the implementation of the model we have used Scikit-learn. Scikit-learn is a free software machine learning library for the Python programming language. It features various classification, regression and clustering algorithms. Here you can find more information: https://scikit-learn.org/stable/.")
 
-def trainTest_modelInfo():
-  st.write("Before starting the stage it is important that we do not forget the step of spending your data. The model should be judged on its ability to predict new, unseen data. Therefore, you must have separate test and training subsets of your data set.")
-  
-  #image = Image.open('Images/splitData.jpg')
-  st.image(image, width=550)
 
-  st.write("Now it is the step of configuring the entire modeling process to maximize performance while safeguarding against overfitting. Therefore it is necessary to understand the following concepts.")
-  st.subheader("What are Hyperparameters?")
-  st.write("When we talk of tuning models, we specifically mean tuning hyperparameters. There are two types of parameters in machine learning algorithms:")
-  st.write("- Model parameters: Model parameters are learned attributes that define individual models.")
-  st.write("- Hyperparameters: Hyperparameters express higher-level structural settings for algorithms.")
-
-  st.subheader("What are Hyperparameters?")
-  st.write("Cross-validation is a method for getting a reliable estimate of model performance using only your training data.")
-  st.write("There are several ways to cross-validate. The most common one, 10-fold cross-validation.")
-
-  #image = Image.open('Images/CrossValidation.jpg')
-  st.image(image, width=550)
-
-  st.subheader("Fit and Tune Models")
-  st.write("Once we have divided our data set into test and training sets, and have implemented the hyperparameter optimization and cross-validation techniques, it is necessary to fit and tune our model.")
-  st.write("In summary, all we have to do is perform the entire cross-validation loop detailed above on each set of hyperparameter values.")
-
-  st.subheader("Evaluate the Model")
-  st.write("Once the model has been fitted by cross-validation with the training data, it is time to evaluate the model.")
-  st.write("The test set that was saved as a truly invisible data set can now be used to get a reliable estimate of the performance of our model.")
-
-def improve_modelInfo():
-  st.write("Once the precision of the model is obtained, we can do a few things to refine the model and improve the precision like:")
-  st.write("- Adjust algorithm parameters to improve performance. Sometimes small adjustments have a significant impact.")
-  st.write("- Use a different algorithm may work better for what we are looking for.")
-
-def deplyment_modelInfo():
-  st.write("We have deployed the model with Streamlit. Streamlit is an open Python package that helps you to create drop-down interactive web applications without any knowledge of HTML or CSS, etc. Python is all you need.")
-  st.write("Here you have a basic tutorial for deploy your model with streamlit: https://towardsdatascience.com/deploying-a-basic-streamlit-app-ceadae286fd0")
-
-def buildMachineInfo():
-  st.subheader("The steps we have followed to build our machine to detect fake news.")
-  st.text("\n")
-  if st.checkbox("1. Get Data"):
-    getDataInfo()
-  if st.checkbox("2. Clean, Prepare & Manipulate Data"):
-    prepareDataInfo()
-  if st.checkbox("3. Choose the model"):
-    choose_modelInfo()
-  if st.checkbox("4. Train and Test Model"):
-    trainTest_modelInfo()
-  if st.checkbox("5. Improve"):
-    improve_modelInfo()
-  if st.checkbox("6. Deployment"):
-    deplyment_modelInfo()    
-
-def detailsInfo():
-  st.subheader("Explained code of our machine")
-  st.write("If you want to know the implementation in more detail, we leave you a nootebook colab with all the code explained.")
-  st.write("Colab Notebook: https://colab.research.google.com/drive/1j61A8-zfTPIof4Usj9dhAVZeJfCWc51K?authuser=3#scrollTo=6MZvFKhPpJ3j.")
-  st.write("Don't forget to follow Saturdays AI on all social media")
-
-if __name__ == "__main__":
-  
-  introduction()
-  runPrediction()
-  buildMachineInfo()
-  detailsInfo()
 
   
