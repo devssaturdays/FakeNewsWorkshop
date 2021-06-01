@@ -24,7 +24,7 @@ from sklearn.decomposition import PCA, TruncatedSVD
 from sklearn.model_selection import train_test_split
 
 
-from PIL import Image   ## For image
+#from PIL import Image   ## For image
 from io import StringIO  ## for text input and output from the web app
 ########################################################################################################################################
 
@@ -162,9 +162,9 @@ def introduction():
   st.title("Fake News")
   st.header('Disinformation in the age of the information society')
 
-  image = Image.open('Images/fakeNews.jpeg')
+  #image = Image.open('Images/fakeNews.jpeg')
 
-  st.image(image, width=650)
+  #st.image(image, width=650)
 
   st.write('There have always been fake news, but with the emergence of the Internet and new communication and information technologies, fake news has become part of our daily lives. Social media algorithms do not have an easy task determining the truthfulness of information. In this way, supposedly real images and videos that have been professionally manipulated are disseminated. This disinformation can influence debates and public opinion and cause a hugh damage on our society and daily lifes.')
   st.text('\n')
