@@ -194,11 +194,11 @@ def prepareDataInfo():
   st.image(image, width=600)
   
   st.write("3. Lemmatization: is a linguistic term that means grouping together words with the same root or lemma but with different inflections or derivatives of meaning so they can be analyzed as one item. The aim is to take away inflectional suffixes and prefixes to bring out the word’s dictionary form.")
-  #image = Image.open('Images/lemmatization.png')
+  image = Image.open('Images/lemmatization.png')
   st.image(image, width=300)
   
   st.write("4. TF-IDF: is a statistical measure that evaluates how relevant a word is to a document in a collection of documents. This is done by multiplying two metrics: how many times a word appears in a document, and the inverse document frequency of the word across a set of documents.")
-  #image = Image.open('Images/tf-idf.png')
+  image = Image.open('Images/tf-idf.png')
   st.image(image, width=600)
   
   st.write("For the use of all these techniques we have used NLTK. Is a suite of libraries and programs for symbolic and statistical natural language processing (NLP) for English written. Here you can find more information: https://www.nltk.org/.")
@@ -207,7 +207,7 @@ def choose_modelInfo():
   st.write("There are different models that we can choose according to the objective we have: we will use algorithms for classification , prediction , linear regression ,  clustering (example k-means or k-nearest neighbor ),   Deep Learning  (ex:  neural network ), Bayesian , etc. There are variants if what we are going to process are images, sound, text, numerical values.") 
   st.write("In our case we have chosen Gradient Boosting. Gradient Boosting  is a family of algorithms used in both classification and regression based on the combination of weak predictive models ( weak learners ) -usually decision trees- to create a predictive model. strong. Weak decision trees are generated sequentially, with each tree being created to correct the errors in the previous tree. The apprentices are typically shallow trees , typically just one, two, or three levels deep.")
 
-  #image = Image.open('Images/gradientBoosting.png')
+  image = Image.open('Images/gradientBoosting.png')
 
   st.image(image, width=600)
 
@@ -216,7 +216,7 @@ def choose_modelInfo():
 def trainTest_modelInfo():
   st.write("Before starting the stage it is important that we do not forget the step of spending your data. The model should be judged on its ability to predict new, unseen data. Therefore, you must have separate test and training subsets of your data set.")
   
-  #image = Image.open('Images/splitData.jpg')
+  image = Image.open('Images/splitData.jpg')
   st.image(image, width=550)
 
   st.write("Now it is the step of configuring the entire modeling process to maximize performance while safeguarding against overfitting. Therefore it is necessary to understand the following concepts.")
@@ -229,7 +229,7 @@ def trainTest_modelInfo():
   st.write("Cross-validation is a method for getting a reliable estimate of model performance using only your training data.")
   st.write("There are several ways to cross-validate. The most common one, 10-fold cross-validation.")
 
-  #image = Image.open('Images/CrossValidation.jpg')
+  image = Image.open('Images/CrossValidation.jpg')
   st.image(image, width=550)
 
   st.subheader("Fit and Tune Models")
