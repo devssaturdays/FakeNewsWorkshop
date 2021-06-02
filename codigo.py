@@ -11,7 +11,7 @@ import pickle   ## For model loading
 import spacy  ## For NLP tasks 
 import time
 
-from PIL import Image   ## For image
+#from PIL import Image   ## For image
 from io import StringIO  ## for text input and output from the web app
 
 st.title("EDA FAKE NEWS")
@@ -191,9 +191,9 @@ if plot_option == "Percentatge of Articles By Stance":
 st.title("Predicting Fake News")
 st.header('This App is created to predict if a New is real or fake')
 
-image = Image.open('fakeNews.jpeg')
+#image = Image.open('fakeNews.jpeg')
 
-st.image(image, caption='Fake News')
+#st.image(image, caption='Fake News')
 
 headline = st.text_area('Enter a headline')
 outputHeadline = ""
