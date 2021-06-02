@@ -24,7 +24,7 @@ from sklearn.decomposition import PCA, TruncatedSVD
 from sklearn.model_selection import train_test_split
 
 
-#from PIL import Image   ## For image
+from PIL import Image   ## For image
 from io import StringIO  ## for text input and output from the web app
 ########################################################################################################################################
 
@@ -162,7 +162,7 @@ def introduction():
   st.title("Fake News")
   st.header('Disinformation in the age of the information society')
 
-  #image = Image.open('Images/fakeNews.jpeg')
+  image = Image.open('Images/fakeNews.jpeg')
 
   #st.image(image, width=650)
 
@@ -186,11 +186,11 @@ def prepareDataInfo():
   st.write("There are different ways to preprocess your text. The techniques that we have used for preprocessing are the following:")
 
   st.write("1. Tokenization: is the text preprocessing task of breaking up text into smaller components of text (known as tokens).")
-  #image = Image.open('Images/tokenize.png')
+  image = Image.open('Images/tokenize.png')
   st.image(image, width=600)
 
   st.write("2. Removing stop words: since there's a lot of prepositions (in, of, to) and conjunctions (and, but, or, nor, for, so, yet) and ponctuation (, - .) and definite or indefinite articles (a,an,the) in our data, it might be useful to introduce a key concept on Natural Language Processing stop words. Stop words refers to the most common words in a language and when dealing with text processing they shoul be removed, since they do not add any valuable information to our studies.")
-  #image = Image.open('Images/stopWords.png')
+  image = Image.open('Images/stopWords.png')
   st.image(image, width=600)
   
   st.write("3. Lemmatization: is a linguistic term that means grouping together words with the same root or lemma but with different inflections or derivatives of meaning so they can be analyzed as one item. The aim is to take away inflectional suffixes and prefixes to bring out the word’s dictionary form.")
