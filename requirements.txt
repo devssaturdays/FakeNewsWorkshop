@@ -1,8 +1,8 @@
-seaborn
-nltk
-pandas
-matplotlib
-numpy
-Pillow
-scikit_learn
-spacy
+seaborn==0.11.1
+nltk==3.6.2
+pandas==1.2.3
+matplotlib==3.4.1
+numpy==1.20.1
+Pillow==8.2.0
+scikit_learn==0.24.2
+spacy==3.0.6
