@@ -265,3 +265,15 @@ def buildMachineInfo():
   if st.checkbox("6. Deployment"):
     deplyment_modelInfo()    
 
+def detailsInfo():
+  st.subheader("Explained code of our machine")
+  st.write("If you want to know the implementation in more detail, we leave you a nootebook colab with all the code explained.")
+  st.write("Colab Notebook: https://colab.research.google.com/drive/1j61A8-zfTPIof4Usj9dhAVZeJfCWc51K?authuser=3#scrollTo=6MZvFKhPpJ3j.")
+  st.write("Don't forget to follow Saturdays AI on all social media")
+
+if __name__ == "__main__":
+  
+  introduction()
+  runPrediction()
+  buildMachineInfo()
+
