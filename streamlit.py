@@ -164,7 +164,7 @@ def introduction():
 
   #image = Image.open('Images/fakeNews.jpeg')
 
-  st.image(image, width=650)
+  #st.image(image, width=650)
 
   st.write('There have always been fake news, but with the emergence of the Internet and new communication and information technologies, fake news has become part of our daily lives. Social media algorithms do not have an easy task determining the truthfulness of information. In this way, supposedly real images and videos that have been professionally manipulated are disseminated. This disinformation can influence debates and public opinion and cause a hugh damage on our society and daily lifes.')
   st.text('\n')
@@ -273,7 +273,7 @@ def detailsInfo():
 
 if __name__ == "__main__":
   
-  #introduction()
+  introduction()
   runPrediction()
   buildMachineInfo()
   detailsInfo()
