@@ -273,7 +273,7 @@ def detailsInfo():
 
 if __name__ == "__main__":
   
-  introduction()
-  #runPrediction()
-  #buildMachineInfo()
+  #introduction()
+  runPrediction()
+  buildMachineInfo()
   detailsInfo()
